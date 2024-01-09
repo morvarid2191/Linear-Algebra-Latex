@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\title{Linear Algebra}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Definition of a Linear Equation in $n$ Variables:}
+
+A linear equation in $n$ variables $x_1, x_2, x_3, \ldots, x_n$ has the form:
+\[a_1x_1 + a_2x_2 + a_3x_3 + \ldots + a_nx_n = b.\]
+
+Here, the coefficients $a_1, a_2, a_3, \ldots, a_n$ represent real numbers, and the constant term $b$ is also a real number. The term $a_1$ is identified as the leading coefficient, and $x_1$ is the leading variable.\\\\
+
+\textbf{Example of Linear Equation:} Each equation is linear.
+
+a. $3x + 2y = 7$\\\\\\
+\vspace{5cm}  
+
+b. $12x + y - \pi z = \sqrt{2}$\\\\\\
+
+
+\newpage
+
+\textbf{Note:} Linear equations have no products or roots of variables and no variables involved in trigonometric, exponential, or logarithmic functions (any form of composition). Variables appear only to the zero or first power.\\
+
+\textbf{Example of Nonlinear Equation:} Each equation is nonlinear.
+
+a. \[\frac{2}{x} + y = 1\]
+
+\vspace{5cm}  % Adjust the space as needed
+
+b. \[ x + \tan(y) = 2\]\\\
+
+\[a_1x + a_2y = d\]
+\[a_1x_1 + a_2x_2 = d\]
+
+\[a_1x + a_2y +a_3z= d\]
+\[a_1x_1 + a_2x_2+a_3x_3 = d\]
+
+
+\newpage
+
+\textbf{Solutions and Solution Set}
+
+A solution of a linear equation in $n$ variables is a list $(s_1, s_2, \ldots, s_n)$ of numbers that makes the equation a true statement when the values $s_1, \ldots, s_n$ are substituted for $x_1, \ldots, x_n$, respectively.\\
+
+
+For example, $x_1 = 2$ and $x_2 = 1$ satisfy the equation $x_1 + 2x_2 = 4$. Some other solutions are $x_1 = -4$ and $x_2 = 4$, $x_1 = 0$ and $x_2 = 2$, and $x_1 = -2$ and $x_2 = 3$.\\
+
+The set of all solutions of a linear equation is its solution set, and when you have found this set, you have solved the equation. To describe the entire solution set of a linear equation, use a parametric representation.\\
+
+\textbf{Example} Solve the linear equation is given by:
+\[
+x_1 + 2x_2 = 4
+\]
+
+To find the solution set of an equation involving two variables, solve for one of the
+variables in terms of the other variable. Solving for $x_1$ in terms of $x_2$, you obtain
+\[ x_1 = 4 - 2x_2. \]
+
+In this form, the variable $x_2$ is free, which means that it can take on any real value. The
+variable $x_1$ is not free because its value depends on the value assigned to $x_2$. To represent
+the infinitely many solutions of this equation, it is convenient to introduce a third variable
+$t$ called a parameter. By letting $x_2 = t$, you can represent the solution set as
+\[ x_1 = 4 - 2t, \quad x_2 = t, \quad t \text{ \ is \ any\ real \ number.} \]
+
+To obtain particular solutions, assign values to the parameter $t$. For instance, $t = 1$
+yields the solution $x_1 = 2$ and $x_2 = 1$, and $t = 4$ yields the solution $x_1 = -4$
+and $x_2 = 4$.\\
+
+\vspace{4cm}  % Adjust the space as needed
+
+
+ \textbf{Note}: A parametric representation is a way to express a set of equations using parameters, and in this case,  t serves as a parameter representing any real number. By assigning different values to  t, you can generate specific solutions for the original system of equations.
+
+\newpage
+
+
+\end{document}
