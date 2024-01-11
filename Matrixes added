@@ -477,8 +477,15 @@ If $m$ and $n$ are positive integers, then an $m \times n$ (read ``$m$ by $n$'')
 The entry $a_{ij}$ is located in the $i$th row and the $j$th column. The index $i$ is called the row subscript because it identifies the row in which the entry lies, and the index $j$ is called the column subscript because it identifies the column in which the entry lies. 
 \\
 
-A matrix with $m$ rows and $n$ columns is of size $m \times n$. When $m = n$, the matrix is square of order $n$, and the entries $a_{11}, a_{22}, a_{33}, \ldots, a_{nn}$ are the main diagonal entries.
+\textbf{Note:} A matrix with $m$ rows and $n$ columns is of size $m \times n$.
+\\
+
+\textbf{Note:} When $m = n$, the matrix is square of order $n$, and the entries $a_{11}, a_{22}, a_{33}, \ldots, a_{nn}$ are the main diagonal entries.
 \\\
+
+\textbf{Example:}
+
+\\
 
 a. $[3]$ \quad 
 \\
@@ -523,6 +530,73 @@ d. \[
 \\\
 Size: $3 \times 2$
 
+\newpage
+
+
+
+We can convert each matrix into a system of linear equations:
+\\\\
+
+a.
+\[ A = [3] \]
+\[ 3x = 0 \]
+
+b.
+
+\[
+   M =
+  \left[ {\begin{array}{cc}
+   1 & 2 \\
+   3 & 4 \\
+  \end{array} } \right]
+\]
+\\\
+
+\[
+\begin{array}{rcr}
+  x + 2y &=& 0 \\
+  3x + 4y &=& 0
+\end{array}
+\]
+\\\
+
+c. \[
+   N=
+  \left[ {\begin{array}{ccc}
+   -24 & 10 & 3 \\
+   -1 & 1 & 1 \\
+  \end{array} } \right]
+\]
+\\
+
+\\\
+\[
+\begin{array}{rcrcrcr}
+-24x & + & 10y & + & 3z & = & 0 \\
+-x & + & y & + & z & = & 0 \\
+\end{array}
+\]
+
+\\\
+
+d. \[
+   A=
+  \left[ {\begin{array}{cc}
+   -24 & 10 \\
+   3 & -1 \\
+   1 & 1 \\
+  \end{array} } \right]
+\]
+
+\\\
+
+\[
+\begin{array}{rcrcr}
+-24x & + & 10y & = & 0 \\
+3x & - & y & = & 0 \\
+x & + & y & = & 0 \\
+\end{array}
+\]
 
 
 
