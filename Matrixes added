@@ -1,0 +1,529 @@
+\documentclass{article}
+
+\title{Linear Algebra}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Definition of a Linear Equation in $n$ Variables:}
+
+A linear equation in $n$ variables $x_1, x_2, x_3, \ldots, x_n$ has the form:
+\[a_1x_1 + a_2x_2 + a_3x_3 + \ldots + a_nx_n = b.\]
+
+Here, the coefficients $a_1, a_2, a_3, \ldots, a_n$ represent real numbers, and the constant term $b$ is also a real number. The term $a_1$ is identified as the leading coefficient, and $x_1$ is the leading variable.\\\\
+
+\textbf{Example of Linear Equation:} Each equation is linear.
+
+a. $3x + 2y = 7$\\\\\\
+\vspace{5cm}  
+
+b. $12x + y - \pi z = \sqrt{2}$\\\\\\
+
+
+\newpage
+
+\textbf{Note:} Linear equations have no products or roots of variables and no variables involved in trigonometric, exponential, or logarithmic functions (any form of composition). Variables appear only to the zero or first power.\\
+
+\textbf{Example of Nonlinear Equation:} Each equation is nonlinear.
+
+a. \[\frac{2}{x} + y = 1\]
+
+\vspace{5cm}  % Adjust the space as needed
+
+b. \[ x + \tan(y) = 2\]\\\
+
+\[a_1x + a_2y = d\]
+\[a_1x_1 + a_2x_2 = d\]
+
+\[a_1x + a_2y +a_3z= d\]
+\[a_1x_1 + a_2x_2+a_3x_3 = d\]
+
+
+\newpage
+
+\textbf{Solutions and Solution Set}
+
+A solution of a linear equation in $n$ variables is a list $(s_1, s_2, \ldots, s_n)$ of numbers that makes the equation a true statement when the values $s_1, \ldots, s_n$ are substituted for $x_1, \ldots, x_n$, respectively.\\
+
+
+For example, $x_1 = 2$ and $x_2 = 1$ satisfy the equation $x_1 + 2x_2 = 4$. Some other solutions are $x_1 = -4$ and $x_2 = 4$, $x_1 = 0$ and $x_2 = 2$, and $x_1 = -2$ and $x_2 = 3$.\\
+
+The set of all solutions of a linear equation is its solution set, and when you have found this set, you have solved the equation. To describe the entire solution set of a linear equation, use a parametric representation.\\
+
+\textbf{Example} Solve the linear equation is given by:
+\[
+x_1 + 2x_2 = 4
+\]
+
+To find the solution set of an equation involving two variables, solve for one of the
+variables in terms of the other variable. Solving for $x_1$ in terms of $x_2$, you obtain
+\[ x_1 = 4 - 2x_2. \]
+
+In this form, the variable $x_2$ is free, which means that it can take on any real value. The
+variable $x_1$ is not free because its value depends on the value assigned to $x_2$. To represent
+the infinitely many solutions of this equation, it is convenient to introduce a third variable
+$t$ called a parameter. By letting $x_2 = t$, you can represent the solution set as
+\[ x_1 = 4 - 2t, \quad x_2 = t, \quad t \text{ \ is \ any\ real \ number.} \]
+
+To obtain particular solutions, assign values to the parameter $t$. For instance, $t = 1$
+yields the solution $x_1 = 2$ and $x_2 = 1$, and $t = 4$ yields the solution $x_1 = -4$
+and $x_2 = 4$.\\
+
+\vspace{4cm}  % Adjust the space as needed
+
+
+ \textbf{Note}: A parametric representation is a way to express a set of equations using parameters, and in this case,  t serves as a parameter representing any real number. By assigning different values to  t, you can generate specific solutions for the original system of equations.
+
+\newpage
+
+
+
+\begin{document}
+
+\section*{System of Linear Equations}
+
+A system of $m$ linear equations in $n$ variables is a set of $m$ equations, each of which
+is linear in the same $n$ variables:
+
+
+\[
+\begin{array}{cccccc}
+    a_{11}x_1 + a_{12}x_2 + a_{13}x_3 + \ldots + a_{1n}x_n &=& b_1 \\
+    a_{21}x_1 + a_{22}x_2 + a_{23}x_3 + \ldots + a_{2n}x_n &=& b_2 \\
+    a_{31}x_1 + a_{32}x_2 + a_{33}x_3 + \ldots + a_{3n}x_n &=& b_3 \\
+    &\vdots & \\
+    a_{m1}x_1 + a_{m2}x_2 + a_{m3}x_3 + \ldots + a_{mn}x_n &=& b_m.
+\end{array}
+\]
+\\\
+
+A solution of a linear system is a sequence of numbers $s_1, s_2, s_3, \ldots, s_n$ that is a solution of each equation
+in the system. \\\\
+
+
+
+\textbf{Example:} The system
+\[
+\begin{array}{rcrcrc}
+    x_1 & - & x_2 & = & 0 \\
+    x_1 & + & x_2 & = & 0 \\
+\end{array}
+\]
+
+
+has $x_1 = 0$ and $x_2 = 0$ as a solution because $x_1 = 0$ and $x_2 = 0$ satisfy both
+equations. On the other hand, $x_1 = 1$ and $x_2 = 0$ is not a solution of the system
+because these values satisfy only the first equation in the system.\\\
+\\\
+
+\textbf{Example:} The system
+\[
+\begin{array}{rcrcrcrc}
+    2x_1 & + & 2x_2 & - & 3x_4 & = & 2 \\
+    2x_2 & - & x_3 & + & x_4 & = & 0 \\
+\end{array}
+\]
+
+
+has $x_1 = \frac{5}{2} $ and $x_2 = 0$ and $x_3 = 1$ and $x_4 = 1$ as a solution.\\\
+
+\newpage
+For a system of linear equations, precisely one of the following statements is true:
+
+\begin{enumerate}
+    \item The system has exactly one solution (consistent system).
+    \item The system has infinitely many solutions (consistent system).
+    \item The system has no solution (inconsistent system).
+\end{enumerate}
+
+\\\\\
+
+
+From Algebra recall:\\
+The number of solutions to a system of two linear equations in two variables is determined by one of the following scenarios:
+
+\begin{enumerate}
+    \item \textbf{Exactly one ordered-pair solution:} The two lines intersect at a single point.
+    \item \textbf{No solution:} The two lines are parallel.
+    \item \textbf{Infinitely many solutions:} The two lines are identical.
+\end{enumerate}
+
+\newpage
+
+
+\textbf{Example:} The system
+
+\[
+\begin{array}{rcrcrc}
+    x_1 & - & 2x_2 & = & -1 \\
+    x_1 & - & 3x_2 & = & -3
+\end{array}
+\]\\\
+
+\\\
+
+
+The solution is the single point $(3, 2)$, as you can easily verify.
+
+
+\\\\
+\\\\\
+
+
+
+
+\textbf{Example:} The system
+
+
+\[
+\begin{array}{rcrcrc}
+    x_1 & - & 2x_2 & = & -1 \\
+    -x_1 & + & 2x_2 & = & 3
+\end{array}
+\]
+
+has No solution.\\\\
+
+\\\\\\\\\\\
+
+
+
+
+\textbf{Example:} The system
+
+\[
+\begin{array}{rcrcrc}
+    x_1 & - & 2x_2 & = & -1 \\
+    -x_1 & + & 2x_2 & = & 1
+\end{array}
+\]
+\\\
+has infinitely many solutions.\\
+
+\\\\
+
+\newpage
+
+Which system is easier to solve algebraically?
+
+\[
+\begin{array}{rcrcrcr}
+    x & - & 2y & + & 3z & = & 9 \\
+   -x & + & 3y & & & = & -4 \\
+    2x & - & 5y & + & 5z & = & 17
+\end{array}
+\]
+
+and
+
+\[
+\begin{array}{rcrcr}
+    x & - & 2y & + & 3z & = & 9 \\
+    y & & & + & 3z & = & 5 \\
+    & & & z & = & 5
+\end{array}
+\]
+
+The system on the right is clearly easier to solve. This system is in row-echelon form, which means that it has a “stair-step” pattern with leading coefficients of 1. To solve such a system, use back-substitution.
+
+
+\\\
+
+
+\textbf{Example:}  Using Back-Substitution in Row-Echelon Form
+
+Use back-substitution to solve the system.
+
+\[
+\begin{array}{rcr}
+    x - 2y & = & 5 \quad \text{Equation 1} \\
+    y & = & 2 \quad \text{Equation 2}
+\end{array}
+\]
+
+\\\
+
+
+\textbf{SOLUTION}
+
+From Equation 2, you know that $y = 2$. \\
+By substituting this value of $y$ into Equation 1, you obtain
+\[ x - 2(2) = 5 \]
+Substitute $2$ for $y$.
+\[ x = 9 \]
+Solve for $x$.
+
+The system has exactly one solution: $x = 9$ and $y = 2$.
+\\\
+
+The term back-substitution implies that you work backward. For instance, in Example, the second equation gives you the value of $y$. Then you substitute that value into the first equation to solve for $x$. 
+\\\
+
+\newpage
+
+
+\textbf{Example:} Using Back-Substitution in Row-Echelon Form
+
+Solve the system.
+
+\[
+\begin{array}{rcrcrcr}
+    x & - & 2y & + & 3z & = & 9 \quad \text{Equation 1} \\
+    & & y & + & 3z & = & 5 \quad \text{Equation 2} \\
+    & & & & z & = & 0 \quad \text{Equation 3}
+\end{array}
+\]
+\\
+\textbf{SOLUTION}
+
+From Equation 3, you know the value of $z$. To solve for $y$, substitute $z = 0$ into Equation 2 to obtain
+\[ y + 3(0) = 5 \]
+Substitute $0$ for $z$.
+\[ y = 5 \]
+Solve for $y$.
+
+Then, substitute $y = 5$ and $z = 0$ in Equation 1 to obtain
+\[ x - 2(5) + 3(0) = 9 \]
+Substitute $5$ for $y$ and $0$ for $z$.
+\[ x = 19 \]
+Solve for $x$.
+
+The solution is $x = 19$, $y = 5$, and $z = 0$.
+\\
+
+Two systems of linear equations are equivalent when they have the same solution set. To solve a system that is not in row-echelon form, first rewrite it as an equivalent system that is in row-echelon form using the operations listed on the next page.
+\\\
+
+
+
+\newpage
+
+Two systems of linear equations are equivalent when they have the same solution set. To solve a system that is not in row-echelon form, first rewrite it as an equivalent system that is in row-echelon form using the following operations:
+
+\begin{enumerate}
+    \item Interchange two rows.
+    \item Multiply a row by a nonzero constant.
+    \item Add or subtract a multiple of one row from another row.
+\end{enumerate}
+
+\\\\
+
+
+\textbf{Example:}Using Elimination to Rewrite a System in Row-Echelon Form
+
+Solve the system.
+
+\[
+\begin{array}{rcrcrcr}
+    x & - & 2y & + & 3z & = & 9 \\
+   -x & + & 3y & & & = & -4 \\
+    2x & - & 5y & + & 5z & = & 17
+\end{array}
+\]
+\\\
+
+\textbf{SOLUTION}
+
+Although there are several ways to begin, you want to use a systematic procedure that can be applied to larger systems. Work from the upper left corner of the system, saving the $x$ at the upper left and eliminating the other $x$-terms from the first column.
+
+\\
+Adding the first equation to the second equation produces a new second equation.\\
+
+\[
+\begin{array}{rcrcrcr}
+    x & - & 2y & + & 3z & = & 9 \\
+    & & y & + & 3z & = & 5 \\
+    & & 2x & - & 5y & + & 5z & = & 17
+\end{array}
+\]
+\\
+
+Algebra
+\[
+\begin{array}{rcrcrcr}
+      x & - & 2y & + & 3z & = & 9 \\
+   -x & + & 3y & & & = & -4 \\
+   
+\end{array}
+\]
+\[0x + y +3 z = 5\]
+
+
+
+\\
+Adding $-2$ times the first equation to the third equation produces a new third equation.
+\\
+\[
+\begin{array}{rcrcrcr}
+    x & - & 2y & + & 3z & = & 9 \\
+    & & y & + & 3z & = & 5 \\
+     - & y & - & z & = & -1
+\end{array}
+\]
+
+\\\
+\textbf{Algebra}
+\[
+\begin{array}{rcrcrcr}
+  -2x & + & 4y & - & 6z & = & -18 \\
+    & & 2x & - & 5y & + & 5z & = & 17
+\end{array}
+\]
+
+\[0x - y - z = -1\]
+
+
+\\
+
+Adding the second equation to the third equation produces a new third equation.
+\\\
+Algebra
+\\
+\[
+\begin{array}{rcrcrcr}
+    & & y & + & 3z & = & 5 \\
+     - & y & - & z & = & -1
+\end{array}
+\]
+\\\
+\[0y + 2z = 4\]
+\\
+
+\[
+\begin{array}{rcrcrcr}
+    x & - & 2y & + & 3z & = & 9 \\
+    & & y & + & 3z & = & 5 \\
+     & & & 2z & = & 4
+\end{array}
+\]
+
+
+
+
+
+
+Multiplying the third equation by $\frac{1}{2}$ produces a new third equation.
+
+\[
+\begin{array}{rcrcrcr}
+    x & - & 2y & + & 3z & = & 9 \\
+    & & y & + & 3z & = & 5 \\
+    & & & z & = & 2
+\end{array}
+\]
+
+This is the same system you solved in Example, and, as in that example, the solution is $x = 1$, $y = -1$, $z = 2$.
+\\
+
+
+#solution in the last note
+
+\[
+\begin{array}{rcrcrcr}
+    -2 x_1 & + & 6x_2 & - & 2x_3 & = & -2 \\
+    2 x_1 & - & x_2 & - & 2x_3 & = & 2 \\
+\end{array}
+\]
+\[5x_2 - 4x_3 = 0\]
+
+
+#Homework
+q3.
+
+\begin{document}
+
+To simplify the expression $\frac{3}{y} + \frac{2}{x} = 1$, we find a common denominator and combine the fractions:
+
+\[
+\frac{3x}{xy} + \frac{2y}{xy} = 1
+\]
+
+Combining the fractions gives:
+
+\[
+\frac{3x + 2y}{xy} = 1
+\]
+
+Multiplying both sides by $xy$ to isolate the numerator, we get:
+
+\[
+3x + 2y = xy
+\]
+
+So, the simplified form of the expression is $3x + 2y = xy$.
+
+\newpage
+
+
+\textbf{Definition of a Matrix:}
+If $m$ and $n$ are positive integers, then an $m \times n$ (read ``$m$ by $n$'') matrix is a rectangular array in which each entry, $a_{ij}$, of the matrix is a number. An $m \times n$ matrix has $m$ rows and $n$ columns. Matrices are usually denoted by capital letters.
+
+
+
+
+\[
+\begin{array}{ccccccc}
+    a_{11} & a_{12} & a_{13} & \dots  & a_{1n} \\
+    a_{21} & a_{22} & a_{23} & \dots  & a_{2n} \\
+    a_{31} & a_{32} & a_{33} & \dots  & a_{3n} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m2} & a_{m3} & \dots  & a_{mn} \\
+\end{array}
+\]
+
+\\\
+
+The entry $a_{ij}$ is located in the $i$th row and the $j$th column. The index $i$ is called the row subscript because it identifies the row in which the entry lies, and the index $j$ is called the column subscript because it identifies the column in which the entry lies. 
+\\
+
+A matrix with $m$ rows and $n$ columns is of size $m \times n$. When $m = n$, the matrix is square of order $n$, and the entries $a_{11}, a_{22}, a_{33}, \ldots, a_{nn}$ are the main diagonal entries.
+\\\
+
+a. $[3]$ \quad 
+\\
+
+Size: $1 \times 1$
+
+\\\
+
+
+b. \[
+   M=
+  \left[ {\begin{array}{cc}
+   1 & 2 \\
+   3 & 4 \\
+  \end{array} } \right]
+\]
+\\\
+Size: $2 \times 2$
+\\
+
+
+c. \[
+   N=
+  \left[ {\begin{array}{ccc}
+   -24 & 10 & 3 \\
+   -1 & 1 & 1 \\
+  \end{array} } \right]
+\]
+\\
+
+Size: $2 \times 3$
+\\\
+
+d. \[
+   A=
+  \left[ {\begin{array}{cc}
+   -24 & 10 \\
+   3 & -1 \\
+   1 & 1 \\
+  \end{array} } \right]
+\]
+\\\
+Size: $3 \times 2$
+
+
+
+
+\end{document}
