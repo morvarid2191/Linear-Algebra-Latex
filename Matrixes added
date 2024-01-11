@@ -598,6 +598,71 @@ x & + & y & = & 0 \\
 \end{array}
 \]
 
+\newpage
+
+Recall that we introduced three operations that yield equivalent systems of linear equations:\\
+
+\\
+1. Interchanging two equations.\\\
+
+2. Multiplying an equation by a nonzero constant.\\\
+
+3. Adding a multiple of an equation to another equation.\\\
+
+\\
+In the language of matrices, these operations align with elementary row operations. 
+\\\
+
+\\\
+
+\textbf{Note:} Elementary Row Operations\\
+\\
+1. Interchange two rows.\\
+2. Multiply a row by a nonzero constant.\\\
+3. Add a multiple of a row to another row.\\\
+
+\\
+
+\textbf{Example:} These two matrices are equivalent
+
+\[
+A =
+\left[ {\begin{array}{cc}
+   2 & 2 \\
+   1 & 1 \\
+\end{array} } \right]
+\]
+
+and
+
+\[
+B =
+\left[ {\begin{array}{cc}
+   1 & 0 \\
+   0 & 1 \\
+\end{array} } \right]
+\]
+
+\\\
+\[
+A =
+\left[ {\begin{array}{cc}
+   2 & 2 \\
+   1 & 1 \\
+\end{array} } \right]
+\overset{\text{Row \ Interchange \ }}{\longrightarrow}
+\left[ {\begin{array}{cc}
+   1 & 1 \\
+   2 & 2 \\
+\end{array} } \right]
+\overset{\text{Scalar \ Multiplication \ }}{\longrightarrow}
+\left[ {\begin{array}{cc}
+   1 & 1 \\
+   0 & 0 \\
+\end{array} } \right]
+= B
+\]
 
 
+\\
 \end{document}
